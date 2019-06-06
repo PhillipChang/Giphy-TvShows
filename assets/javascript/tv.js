@@ -21,7 +21,7 @@ function displayTvShow(){
     for ( i = 0; i < 10; i++){
         var showDiv = $("<div>");
         var showImage = $("<img>");
-        showImage.attr('src', results[i].images.fixed_height.url);
+        showImage.attr('src', results[i].images.fixed_height_still.url);
         showImage.attr('data-still', results[i].images.fixed_height_still.url);
         showImage.attr('data-animate', results[i].images.fixed_height.url);
         showImage.attr('data-state', "still");
@@ -59,3 +59,16 @@ $(document).on("click", ".tvshow", displayTvShow);
 
 newRemotes();
 
+$(document).on("click", ".tv-gif", function(){
+    console.log("hello");
+    var state = $(this).attr('data-state');
+    console.log("this is state" +state);
+    if (state === "still") {
+        $(this).attr('src', $(this).attr('data-animate'));
+        $(this).attr('data-state', "animate");
+      }
+      else if (state === "animate") {
+        $(this).attr('src', $(this).attr('data-still'));
+        $(this).attr('data-state',"still");
+      }
+});
