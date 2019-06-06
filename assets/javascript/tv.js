@@ -20,18 +20,22 @@ function displayTvShow(){
 
     for ( i = 0; i < 10; i++){
         var showDiv = $("<div>");
+        showDiv.addClass('dvd');
         var showImage = $("<img>");
         showImage.attr('src', results[i].images.fixed_height_still.url);
         showImage.attr('data-still', results[i].images.fixed_height_still.url);
         showImage.attr('data-animate', results[i].images.fixed_height.url);
         showImage.attr('data-state', "still");
         showImage.addClass('tv-gif');
+        showImage.addClass('card rounded-circle');
+
         showDiv.append(showImage);
         console.log("this is showdiv: " +showDiv);
     $(".tv-screen").append(showDiv);
     }    
 });
 }
+
 
 // Function to create new buttons
 
@@ -40,6 +44,8 @@ function newRemotes(){
     for ( i = 0; i < tvShows.length; i++){
         var remote = $("<button>");
         remote.addClass('tvshow');
+        remote.addClass('btn btn-danger');
+        remote.addClass('rounded-circle');
         remote.attr('data-name', tvShows[i]);
         remote.text(tvShows[i]);
         $(".remote-controls").append(remote);
@@ -59,6 +65,7 @@ $(document).on("click", ".tvshow", displayTvShow);
 
 newRemotes();
 
+// Pausing gif function
 $(document).on("click", ".tv-gif", function(){
     console.log("hello");
     var state = $(this).attr('data-state');
