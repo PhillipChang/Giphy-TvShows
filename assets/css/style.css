@@ -1,0 +1,58 @@
+body {
+    background-image: url("../images/background.jpg");
+    /* background-size: 100%; */
+    background-color: red;
+}
+
+.jumbotron {
+    display: flex;
+    text-align: center;
+}
+.lead, .display-4 {
+    font-family: 'Lobster', cursive;
+}
+#add-form{
+    justify-content: center;
+}
+
+.tv-gif {
+    width: 125px;
+    height: 125px;
+}
+.tv-gif:hover{
+    width:175px;
+    height:175px;
+}
+
+.tv-screen {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+}
+
+
+
+.row-1, .row-2, .row-3{
+    display:flex;
+}
+
+
+.remote-controls{
+    display:flex;
+    padding: 15px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-danger {
+    padding: 15px;
+    margin-right: 10px;
+}
+
+.dvd {
+    margin: 5px 10px;
+}
+
+#add-tvshow {
+    font-family: 'Ubuntu', sans-serif;
+}
