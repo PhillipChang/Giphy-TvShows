@@ -15,6 +15,7 @@ function displayTvShow(){
         method: "GET"
     }).then(function(response){
         var results = response.data;
+        console.log (response.data);
 
     for ( i = 0; i < 10; i++){
         var showDiv = $("<div>");
@@ -25,8 +26,13 @@ function displayTvShow(){
         showImage.attr('data-animate', results[i].images.fixed_height.url);
         showImage.attr('data-state', "still");
         showImage.addClass('tv-gif');
+        showImage.addClass('animated rollIn delay-1s');
         showImage.addClass('card rounded-circle');
         showDiv.append(showImage);
+        var rating = $("<p>");
+        rating.text("Rating: " +results[i].rating);
+        rating.addClass('rating');
+        showDiv.append(rating);
     $(".tv-screen").append(showDiv);
     }    
 });
