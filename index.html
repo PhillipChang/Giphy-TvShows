@@ -16,25 +16,29 @@
 
     <!-- Google Fonts --> 
     <link href="https://fonts.googleapis.com/css?family=Lobster|Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
     
     <title>Giphy TV</title>
   </head>
   <body>
-      <div class="jumbotron jumbotron-fluid bg-danger text-white rounded-circle">
+      <div class="jumbotron jumbotron-fluid bg-danger text-white animated lightSpeedIn delay-2s rounded-circle">
           <div class="container">
-            <h1 class="display-4">Giphy Tv</h1>
+            <h1 class="display-4"><img src="assets/images/giphy.png" class="giphy animated bounceInDown delay-4s"> Giphy Tv</h1>
             <p class="lead">Add your favorite TV Shows and take a sneak preview down below</p>
             <div class="row-2 col-md-12" id="add-form">
                 <form id=tv-show>
                     <label for="tvshow-input"></label>
-                    <input type = "text" id = "tvshow-input"><span></span><br>
-                    <input id = "add-tvshow" class="btn btn-info" type="submit" value="Add a Tv Show">
+                    <input type = "text" id = "tvshow-input" required><span></span><br><br>
+                    <input id = "add-tvshow" class="btn animated infinite pulse delay 6s" type="submit" value="Add a Tv Show" required>
                 </form>
               </div>
           </div>
         </div>
     <div class="row-1 col-md-12">
-        <div class="remote-controls"></div>
+        <div class="remote-controls animated rollIn delay-2s"></div>
     </div>
     <div class="row-3 col-md-12">
       <div class="tv-screen"></div>

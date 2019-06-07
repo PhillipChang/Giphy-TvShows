@@ -7,6 +7,11 @@ body {
 .jumbotron {
     display: flex;
     text-align: center;
+    opacity: 0.75;
+}
+
+.giphy {
+    width: 5%;
 }
 .lead, .display-4 {
     font-family: 'Lobster', cursive;
@@ -42,6 +47,7 @@ body {
     padding: 15px;
     margin-right: 10px;
     flex-wrap: wrap;
+    font-weight: bold;
 }
 
 .btn-danger {
@@ -54,5 +60,12 @@ body {
 }
 
 #add-tvshow {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Lobster', cursive;
+    background-color: orange;
+}
+
+.rating {
+    color: white;
+    font-family: 'Lobster', cursive;
+    text-align: center;
 }
