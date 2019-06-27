@@ -57,9 +57,14 @@ function newRemotes(){
 // Function to add event listner to form
 $("#add-tvshow").on("click", function(event){
 event.preventDefault();
+if ($("#tvshow-input").val() === ""){
+    alert("Please enter a tv show");
+}
+else {
 var tvshow = $("#tvshow-input").val().trim();
 tvShows.push(tvshow);
 newRemotes();
+}
 });
 
 $(document).on("click", ".tvshow", displayTvShow);
